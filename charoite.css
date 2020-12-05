@@ -1,0 +1,175 @@
+/* Header-----------------------------------------------Header */
+
+header{
+  min-height: 60px;
+  padding: 30px 0px;
+  text-align: center;
+  font-size: 26px;
+  line-height: 0px;
+  margin: 36px auto;
+  padding: 25px;
+  max-width: 600px;
+}
+
+.title{
+  font-family: 'Turret Road', sans-serif;
+  line-height: 1em; 
+  font-size: 4.3em; 
+  font-weight: 100;
+}
+
+/* Main---------------------------------------------------Main */
+
+body{
+  background:rgb(0,0,0);
+  background-image: url("bckgrnd.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Big Shoulders Text', cursive;
+  font-size: 20px;
+  line-height: 1.7;
+  color:#fff;
+  text-align: center;
+  margin: 0px;
+}
+
+.wrapper{
+  border:none;
+  max-width:40000px;
+}
+
+main{
+  overflow:hidden;
+  width: 86%;
+  max-width:1000px;
+  margin: 0px auto;
+  border: 1px solid #d1ccdd;
+  background:rgba(0,0,0,.7);
+  text-align: left;
+  padding: 0 20px;
+}
+
+mark{
+  color: #fff;
+  background-color: rgba(0,0,0,0);
+}
+
+img{
+  float: left; 
+  margin: 0px 20px 20px 0px;
+  border: 1px solid #d1ccdd;
+}
+
+h1,h2,h3,h4{
+  color: #fff;
+  margin: 0;
+}
+
+p{
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  color: #D1CCDC;
+}
+
+a{
+  color: #D1CCDC;
+  text-decoration: none;
+}
+
+a:hover{
+  color: #fff;
+  text-decoration: underline;
+}
+
+main a{
+  color: #fff;
+  text-decoration: underline;
+}
+
+.nav{
+  color: #FFf;
+  font-family: 'Big Shoulders Text', cursive;
+}
+
+.nav a:hover{
+  color: #fff;
+}
+
+.artists-note{
+  font-size: 14px;
+  font-style: italic;
+  color: #fff;
+}
+
+.space{
+  padding: 0 16px;
+}
+
+
+.hex-svg{
+    position: absolute;
+    top:24px;
+    left:0;
+    width: 100%;
+    height: 220px;
+    z-index: -1;
+}
+ 
+.hex-content{
+    color: white;
+    position: absolute;
+    /* centring trick*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);    
+}
+
+/* Footer-----------------------------------------------Footer */
+
+footer {
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  text-align: center;
+  letter-spacing: 8px; 
+  font-size:150%;
+  margin: 0 auto;
+}
+
+/* Mobile Changes --------------------------------------Mobile */
+
+.mobile-only{
+  display: none;
+}
+
+.desktop-only{
+  display: inline;
+}
+
+@media only screen and (max-width: 600px) {
+  header p, a{
+    font-size: 16px;
+  }
+  .space{
+    padding: 0 4px;
+  }
+  body{
+    font-size: 16px;
+  }
+  .title{
+    font-size: 2em; 
+  }
+  .hex-svg {
+    top:0;
+  }
+  footer{
+    font-size:120%;
+  }
+  .mobile-only{
+    display: inline;
+  }
+  .desktop-only{
+    display: none;
+  }
+}
