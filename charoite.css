@@ -31,22 +31,32 @@ body{
   color:#fff;
   text-align: center;
   margin: 0px;
+  width:100%;
 }
 
 .wrapper{
-  border:none;
-  max-width:40000px;
+  background-image: url("stringsplain.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  float: middle;
+  top: 0;
+  left: 50%;
+  margin-left: -201px;
+  width: 100%;
+  height: 296px;
+  z-index: -1;
+  opacity: 0.8;
 }
 
 main{
   overflow:hidden;
   width: 86%;
-  max-width:1000px;
+  max-width:700px;
   margin: 0px auto;
-  border: 1px solid #d1ccdd;
+  border: thick double #ffe28f;
   background:rgba(0,0,0,.7);
   text-align: left;
-  padding: 0 20px;
+  padding: 12px 20px;
 }
 
 mark{
@@ -72,7 +82,7 @@ p{
 }
 
 a{
-  color: #D1CCDC;
+  color:#ffe28f;
   text-decoration: none;
 }
 
@@ -95,16 +105,26 @@ main a{
   color: #fff;
 }
 
-.artists-note{
-  font-size: 14px;
-  font-style: italic;
-  color: #fff;
-}
-
 .space{
   padding: 0 16px;
 }
 
+.button{
+  border: solid 1px #d1ccdd;
+  text-decoration: none;
+  color: #d1ccdd;
+  padding: 0 6px;
+}
+
+.button:hover{
+  border: solid 1px #fff;
+  text-decoration: none;
+}
+
+.albumcover{
+  width: 200px;
+  height: 200px;
+}
 
 .hex-svg{
     position: absolute;
@@ -125,6 +145,14 @@ main a{
     -webkit-transform: translate(-50%, -50%);    
 }
 
+.logo{
+  max-width: 500px; 
+  width: 90%; 
+  border:none; 
+  float:none; 
+  margin:0;
+}
+
 /* Footer-----------------------------------------------Footer */
 
 footer {
@@ -135,6 +163,10 @@ footer {
   letter-spacing: 8px; 
   font-size:150%;
   margin: 0 auto;
+}
+
+footer p{
+  font-size:14px;
 }
 
 /* Mobile Changes --------------------------------------Mobile */
@@ -148,20 +180,39 @@ footer {
 }
 
 @media only screen and (max-width: 600px) {
-  header p, a{
+  body{
+    background-image: url("bckgrnd\ -\ Copy.jpg");
+  }
+  header p, header a{
     font-size: 16px;
   }
   .space{
     padding: 0 4px;
   }
-  body{
-    font-size: 16px;
-  }
   .title{
     font-size: 2em; 
   }
+  body, a, h2{
+    font-size: 26px;
+  }
+  main{
+    padding: 12px 10px;
+  }
+  main p{
+    margin-top: auto;
+  }
   .hex-svg {
     top:0;
+  }
+  .logo{
+    max-width: 370px; 
+  }
+  .wrapper{
+    display:none;
+  }
+  .albumcover{
+    width: 100px;
+    height: 100px;
   }
   footer{
     font-size:120%;
