@@ -52,7 +52,7 @@ main{
   max-width:700px;
   margin: 0px auto;
   border: thick double #ffe28f;
-  background:rgba(0,0,0,.7);
+  background:rgba(0,0,0,.85);
   text-align: left;
   padding: 12px 20px;
 }
@@ -167,6 +167,10 @@ footer p{
   font-size:14px;
 }
 
+footer a{
+  color: #fff;
+}
+
 /* Mobile Changes --------------------------------------Mobile */
 
 .mobile-only{
@@ -212,8 +216,8 @@ footer p{
     width: 100px;
     height: 100px;
   }
-  footer{
-    font-size:120%;
+  .fa{
+    font-size:130% !important;
   }
   .mobile-only{
     display: inline;
