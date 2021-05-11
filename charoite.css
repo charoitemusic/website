@@ -21,7 +21,7 @@ header{
 
 body{
   background:rgb(0,0,0);
-  background-image: url("bckgrnd.jpg");
+  background-image: url("bckgrnd\ -\ Copy.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'Big Shoulders Text', cursive;
@@ -182,9 +182,6 @@ footer a{
 }
 
 @media only screen and (max-width: 600px) {
-  body{
-    background-image: url("bckgrnd\ -\ Copy.jpg");
-  }
   header p, header a{
     font-size: 16px;
   }
