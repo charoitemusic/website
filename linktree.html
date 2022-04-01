@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Charoite</title>
+  <meta name="description" content="Navigation through sound">
+  <meta name="author" content="CHAROITE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@100;400;800&display=swap"
+    rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <style>
+    /* Main---------------------------------------------------Main */
+
+body{
+  background-color: black;
+  background:linear-gradient(90deg, #6f79ac, #23294b 70.71%),
+            linear-gradient(127deg, #23294b,rgba(0,0,0,0) 70.71%);
+  font-family: 'Big Shoulders Text', cursive;
+  font-size: 20px;
+  line-height: 1.7;
+  color:#fff;
+  text-align: center;
+  margin: 0px;
+  width:100%;
+}
+
+.wrapper{
+  background-image: url("stringsplain.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  float: middle;
+  top: 0;
+  left: 50%;
+  margin-left: -201px;
+  height: 296px;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+main{
+  overflow:hidden;
+  width: 86%;
+  max-width:700px;
+  margin: 10px auto;
+  background:rgba(0,0,0,.85);
+  border: 20px;
+  border-radius: 20px;
+  text-align: left;
+  padding: 12px 12px;
+}
+
+h1,h2,h3,h4{
+  color: #fff;
+  margin: 0;
+}
+
+p{
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #D1CCDC;
+}
+
+a{
+  color:#ffe28f;
+  text-decoration: none;
+}
+
+.faicon{
+  font-size: 40px;
+}
+
+a:hover{
+  color: #fff;
+}
+
+main a{
+  color: #fff;
+}
+
+.space{
+  padding: 0 16px;
+}
+
+.fa{
+    padding: 10px;
+  }
+
+  
+.stair-deco-container {
+  display: grid;
+  grid-template-columns: 
+    [outer-start]  5px 
+    [mid-start]    5px 
+    [inner-start]  1fr 
+    [inner-end]    5px 
+    [mid-end]      5px 
+    [outer-end] 
+  ;
+  grid-template-rows: 
+    [inner-start]  5px 
+    [mid-start]    5px 
+    [outer-start]  1fr 
+    [outer-end]    5px 
+    [mid-end]      5px 
+    [inner-end] 
+  ;
+/*   background-color: peachpuff; */
+}
+
+.stair-deco-container .stair-deco-content {
+  grid-column: inner-start / inner-end;
+  grid-row: outer-start / outer-end;
+  padding: 5px 10px;
+/*   background-color: lightblue; */
+/*   color: #000; */
+}
+
+.stair-deco-container .stair-deco-outer-left {
+  grid-column: outer-start / mid-start;
+  grid-row: outer-start / outer-end;
+  border-left: 1px solid plum;
+  border-top: 1px solid plum;
+  border-bottom: 1px solid plum;
+}
+
+.stair-deco-container .stair-deco-outer-right {
+  grid-column: mid-end / outer-end;
+  grid-row: outer-start / outer-end;
+  border-right: 1px solid plum;
+  border-top: 1px solid plum;
+  border-bottom: 1px solid plum;
+}
+
+.stair-deco-container .stair-deco-mid-left {
+  grid-column: mid-start / inner-start;
+  grid-row: mid-start / mid-end;
+  border-top: 1px solid lightcoral;
+  border-bottom: 1px solid lightcoral;
+}
+
+.stair-deco-container .stair-deco-mid-right {
+  grid-column: inner-end / mid-end;
+  grid-row: mid-start / mid-end;
+  border-top: 1px solid lightcoral;
+  border-bottom: 1px solid lightcoral;
+}
+
+.stair-deco-container .stair-deco-mid-top {
+  grid-column: mid-start / mid-end;
+  grid-row: outer-start / mid-start;
+  border-left: 1px solid khaki;
+  border-right: 1px solid khaki;
+}
+
+.stair-deco-container .stair-deco-mid-bottom {
+  grid-column: mid-start / mid-end;
+  grid-row: mid-end / outer-end;
+  border-left: 1px solid khaki;
+  border-right: 1px solid khaki;
+}
+
+.stair-deco-container .stair-deco-inner-top {
+  grid-column: inner-start / inner-end;
+  grid-row: inner-start / mid-start;
+  border-left: 1px solid aquamarine;
+  border-right: 1px solid aquamarine;
+  border-top: 1px solid aquamarine;
+}
+
+.stair-deco-container .stair-deco-inner-bottom {
+  grid-column: inner-start / inner-end;
+  grid-row: mid-end / inner-end;
+  border-left: 1px solid aquamarine;
+  border-right: 1px solid aquamarine;
+  border-bottom: 1px solid aquamarine;
+}
+
+/* Footer-----------------------------------------------Footer */
+
+footer {
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  text-align: center;
+  letter-spacing: 8px; 
+  font-size:150%;
+  margin: 0 auto;
+}
+
+footer p{
+  font-size:14px;
+  color:#eee;
+}
+
+/* Mobile Changes --------------------------------------Mobile */
+
+.mobile-only{
+  display: none;
+}
+
+.desktop-only{
+  display: inline;
+}
+
+@media only screen and (max-width: 600px) {
+  .space{
+    padding: 0 4px;
+  }
+  .title{
+    font-size: 2em; 
+  }
+  body, a, h2{
+    font-size: 20px;
+  }
+  main{
+    padding: 12px 10px;
+  }
+  main p{
+    margin-top: auto;
+  }
+  .wrapper{
+    display:none;
+  }
+  .mobile-only{
+    display: inline;
+  }
+  .desktop-only{
+    display: none;
+  }
+}
+  </style>
+</head>
+
+<body>
+  <div class="wrapper"></div>
+  <main>
+    <div class="stair-deco-container container">
+      <div class="stair-deco-content">
+        <p><img alt="profile picture" style="width:100%;max-width:400px;" src="pic2cropped.jpg" /></p>
+      </div>
+      <div class="stair-deco-outer-left"></div>
+      <div class="stair-deco-outer-right"></div>
+      <div class="stair-deco-mid-left"></div>
+      <div class="stair-deco-mid-right"></div>
+      <div class="stair-deco-mid-top"></div>
+      <div class="stair-deco-mid-bottom"></div>
+      <div class="stair-deco-inner-top"></div>
+      <div class="stair-deco-inner-bottom"></div>
+    </div>
+  </main>
+
+  <main>
+  <div class="stair-deco-container container">
+    <div class="stair-deco-content">
+      <p>The music: <br>
+        <a class="faicon" alt="Apple Music" rel="noreferrer" href="https://music.apple.com/artist/1548543808" target="_blank"><i class="fa fa-music icon"></i></a> 
+        <a class="faicon" alt="Amazon Music" rel="noreferrer" href="https://music.amazon.com/artists/B015YQDM8Q/charoite" target="_blank"><i class="fa fa-amazon icon"></i></a> 
+        <a class="faicon" alt="Spotify" rel="noreferrer" href="https://open.spotify.com/artist/1Ioq5vDj9CNdW0I58ZZwHs" target="_blank"><i class="fa fa-spotify icon"></i></a> 
+        <a class="faicon" alt="YouTube" rel="noreferrer" href="https://www.youtube.com/channel/UCyQs72V4WZzxL9aUzmBZLRw" target="_blank"><i class="fa fa-youtube icon"></i></a> 
+        <a class="faicon" alt="iHeartRadio" rel="noreferrer" href="https://www.iheart.com/artist/charoite-35621373/" target="_blank"><i class="fa fa-heart icon"></i></a> 
+        <a class="faicon" alt="Pandora" rel="noreferrer" href="https://www.pandora.com/artist/charoite/AR6zltlrqnm3JZ2 " target="_blank"><i class="fa fa-p icon"></i></a> 
+        <a class="faicon" alt="Tidal" rel="noreferrer" href="https://tidal.com/browse/artist/7318516" target="_blank"><i class="fa-solid fa-diamond icon"></i></a> 
+        <br>...or search "<b>Charoite</b>" on your player of choice!
+      </p>
+    </div>
+    <div class="stair-deco-outer-left"></div>
+    <div class="stair-deco-outer-right"></div>
+    <div class="stair-deco-mid-left"></div>
+    <div class="stair-deco-mid-right"></div>
+    <div class="stair-deco-mid-top"></div>
+    <div class="stair-deco-mid-bottom"></div>
+    <div class="stair-deco-inner-top"></div>
+    <div class="stair-deco-inner-bottom"></div>
+  </div>
+</main>
+
+<main>
+  <div class="stair-deco-container container">
+    <div class="stair-deco-content">
+      <p><a target="_blank" rel="noreferrer" href="https://www.facebook.com/groups/397995825660532">✨Be a gem!✨</a></p>
+    </div>
+    <div class="stair-deco-outer-left"></div>
+    <div class="stair-deco-outer-right"></div>
+    <div class="stair-deco-mid-left"></div>
+    <div class="stair-deco-mid-right"></div>
+    <div class="stair-deco-mid-top"></div>
+    <div class="stair-deco-mid-bottom"></div>
+    <div class="stair-deco-inner-top"></div>
+    <div class="stair-deco-inner-bottom"></div>
+  </div>
+</main>
+
+<main>
+  <div class="stair-deco-container container">
+    <div class="stair-deco-content">
+      <p><a target="_blank" rel="noreferrer" href="https://www.eventbrite.com/e/charoite-meet-greet-tickets-308203183017">✨Let's hang out!✨</a></p>
+    </div>
+    <div class="stair-deco-outer-left"></div>
+    <div class="stair-deco-outer-right"></div>
+    <div class="stair-deco-mid-left"></div>
+    <div class="stair-deco-mid-right"></div>
+    <div class="stair-deco-mid-top"></div>
+    <div class="stair-deco-mid-bottom"></div>
+    <div class="stair-deco-inner-top"></div>
+    <div class="stair-deco-inner-bottom"></div>
+  </div>
+</main>
+
+<main>
+  <div class="stair-deco-container container">
+    <div class="stair-deco-content">
+      <p><a target="_blank" rel="noreferrer" href="https://www.buymeacoffee.com/charoitemusic">✨VIP Wizards Portal✨</a></p>
+    </div>
+    <div class="stair-deco-outer-left"></div>
+    <div class="stair-deco-outer-right"></div>
+    <div class="stair-deco-mid-left"></div>
+    <div class="stair-deco-mid-right"></div>
+    <div class="stair-deco-mid-top"></div>
+    <div class="stair-deco-mid-bottom"></div>
+    <div class="stair-deco-inner-top"></div>
+    <div class="stair-deco-inner-bottom"></div>
+  </div>
+</main>
+
+<main>
+  <div class="stair-deco-container container">
+    <div class="stair-deco-content">
+      <p>Magical media accounts:<br>
+        <a class="faicon" alt="Facebook" rel="noreferrer" href="https://www.facebook.com/charoitemusic" target="_blank"><i class="fa fa-facebook icon"></i></a>
+        <a class="faicon" alt="Instagram" rel="noreferrer" href="https://www.instagram.com/charoitemusic/" target="_blank"><i class="fa fa-instagram icon"></i></a> 
+        <a class="faicon" alt="Tumblr" rel="noreferrer" href="https://charoite-music.tumblr.com/" target="_blank"><i class="fa fa-tumblr icon"></i></a>
+        <a class="faicon" alt="TikTok" rel="noreferrer" href="https://www.tiktok.com/@charoitemusic" target="_blank"><i class="fa fa-tiktok icon"></i></a></p> 
+      </div>
+    <div class="stair-deco-outer-left"></div>
+    <div class="stair-deco-outer-right"></div>
+    <div class="stair-deco-mid-left"></div>
+    <div class="stair-deco-mid-right"></div>
+    <div class="stair-deco-mid-top"></div>
+    <div class="stair-deco-mid-bottom"></div>
+    <div class="stair-deco-inner-top"></div>
+    <div class="stair-deco-inner-bottom"></div>
+  </div>
+</main>
+
+  <footer>
+    <p>This site does not use cookies.<br>Content © <a href="https://charoitemusic.com" target="_blank" rel="noreferrer">Charoite Music</a>, 2021.</p>
+  </footer>
+
+</body>
+<script src="https://use.fontawesome.com/25bb516a2a.js"></script>
+
+</html>
