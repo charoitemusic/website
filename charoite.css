@@ -51,7 +51,7 @@ main{
   width: 86%;
   max-width:700px;
   margin: 0px auto;
-  border: thick double #ffe28f;
+  border: thick double #afafaf;
   background:rgba(0,0,0,.85);
   text-align: left;
   padding: 12px 20px;
@@ -97,6 +97,7 @@ main a{
 .nav{
   color: #FFf;
   font-family: 'Big Shoulders Text', cursive;
+  font-size: 22px;
 }
 
 .nav a:hover{
