@@ -21,7 +21,7 @@ header{
 
 body{
   background:rgb(0,0,0);
-  background-image: url("bckgrnd\ -\ Copy.jpg");
+  background-image: url("wizardbgd.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'Big Shoulders Text', cursive;
@@ -161,6 +161,8 @@ footer {
   letter-spacing: 8px; 
   font-size:150%;
   margin: 0 auto;
+  background: rgba(0,0,0,.8);
+  border: 1px solid white;
 }
 
 footer p{
