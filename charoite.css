@@ -24,7 +24,7 @@ body{
   background-image: url("wizardbgd.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: 'Big Shoulders Text', cursive;
+  font-family: 'Big Shoulders Text', serif;
   font-size: 20px;
   line-height: 1.7;
   color:#fff;
@@ -108,6 +108,11 @@ main a{
   padding: 0 16px;
 }
 
+.thumbnail{
+  width: 29%;
+  float: none;
+}
+
 .button{
   border: solid 1px #d1ccdd;
   text-decoration: none;
@@ -146,7 +151,7 @@ main a{
 
 .logo{
   max-width: 500px; 
-  width: 90%; 
+  width: 75%; 
   border:none; 
   float:none; 
   margin:0;
@@ -163,7 +168,8 @@ footer {
   font-size:150%;
   margin: 0 auto;
   background: rgba(0,0,0,.8);
-  border: 1px solid white;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
 }
 
 footer p{
