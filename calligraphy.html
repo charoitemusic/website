@@ -29,8 +29,8 @@
       padding: 0;
     }
 
-    a {
-      color: #500f88;
+    .content p a {
+      color: #500f88 !important;
     }
 
     body {
@@ -94,6 +94,13 @@
       height: auto;
       border-radius: 8px;
     }
+
+    video {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3; 
+  max-width: 800px; 
+}
 
     @media (max-width: 700px) {
       .container {
@@ -171,8 +178,8 @@
         <a href="#gallery" class="button">Explore Photo Gallery →</a>
       </div>
 
-      <div class="image" style="text-align:center">
-        <video width="320" height="240" controls>
+      <div class="image" style="text-align:center;">
+        <video controls>
           <source src="process.mp4" type="video/mp4">
           Your browser does not support the video tag.
           (Time lapse of calligrapher drawing a magic circle)
@@ -254,7 +261,7 @@
     <a alt="Instagram" rel="noreferrer" href="https://www.instagram.com/charoiteendeavors/" target="_blank"><i
         class="fa fa-instagram icon"></i></a>
     </div>
-    <p>This site does NOT use cookies.<br>Content © Charoite Music and Charoite Calligraphy, 2026.</p>
+    <p>This site does NOT use cookies.<br>Content © <a href="https://charoitemusic.com">Charoite Music</a> and Charoite Calligraphy, 2026.</p>
   </footer>
 
 </body>
